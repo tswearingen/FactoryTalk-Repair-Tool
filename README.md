@@ -10,16 +10,11 @@ This tool is a Windows Powershell script designed to correct some common issues 
 
 ## Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+The `FactoryTalk Repair Tool.ps1` file is executed in a PowerShell environment. This file may be placed in the desired location and executed from the right-click context menu by selecting "Run in PowerShell".
 
-```shell
-packagemanager install awesome-project
-awesome-project start
-awesome-project "Do something!"  # prints "Nah."
-```
+A PowerShell terminal will open momentarily, close, and then re-open. This is intended behavior as the script attempts to elevate to administrator privileges. This privilege escallation is requred because the script attempts to interact with Windows services.
 
-Here you should say what actually happens when you execute the code above.
+In order for this to function correctly, the user must be a member of the local administrator group or have access to an administrator account.
 
 ### Initial Configuration
 
@@ -29,79 +24,28 @@ The first time this script is executed, the user may encounter the following pro
 Execution Policy Change
 The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
 ```
-The user is responsible for understanding the security implications of this action and should not use this script 
+You must change the execution policy in order to use this script, however the user is responsible for understanding the security implications of this action and should not use this script if doing so is deemed to present unacceptable risk.
 
-### Building
+## Change Log
 
-No build is required.
-
-### Deploying / Publishing
-
-No deployment or publishing is required.
-
-## Features
-
-What's all the bells and whistles this project can perform?
-* What's the main functionality
-* You can also do another thing
-* If you get really randy, you can even do this
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
-
-#### Argument 1
-Type: `String`  
-Default: `'default value'`
-
-State what an argument does and how you can use it. If needed, you can provide
-an example below.
-
-Example:
-```bash
-awesome-project "Some other value"  # Prints "You're nailing this readme!"
-```
-
-#### Argument 2
-Type: `Number|Boolean`  
-Default: 100
-
-Copy-paste as many of these as you need.
-
-## Contributing
-
-When you publish something open source, one of the greatest motivations is that anyone can just jump in and start contributing to your project.
-
-These paragraphs are meant to welcome those kind souls to feel that they are needed. You should state something like:
-
-"If you'd like to contribute, please fork the repository and use a feature
-branch. Pull requests are welcome."
-
-If there's anything else the developer needs to know (e.g. the code style guide), you should link it here. If there's a lot of things to take into consideration, it is common to separate this section to its own file called
-`CONTRIBUTING.md` (or similar). If so, you should say that it exists here.
+v0.1.0
+* Initial version (Alpha)
+* Added ability to correct Factorytalk Activation Helper error.
+* Added ability to correct personalized information error.
 
 ## Links
 
-Even though this information can be found inside the project on machine-readable
-format like in a .json file, it's good to include a summary of most useful
-links to humans using your project. You can include links like:
+Repository: https://github.com/tswearingen/FactoryTalk-Repair-Tool </br>
+Issue tracker: https://github.com/tswearingen/FactoryTalk-Repair-Tool/issues
 
-- Project homepage: https://your.github.com/awesome-project/
-- Repository: https://github.com/your/awesome-project/
-- Issue tracker: https://github.com/your/awesome-project/issues
-  - In case of sensitive bugs like security vulnerabilities, please contact
-    TSwearingen@alassystems.com directly instead of using issue tracker. We value your effort
-    to improve the security and privacy of this project!
-- Related projects:
-  - Your other project: https://github.com/your/other-project/
-  - Someone else's project: https://github.com/someones/awesome-project/
-
+In case of sensitive bugs like security vulnerabilities, please contact TSwearingen@alassystems.com directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
 
 ## Licensing
 
-One really important part: Give your project a proper license. Here you should
-state what the license is and how to find the text version of the license.
-Something like:
+Copyright (C) 2021  ALAS System Inc
 
-"The code in this project is licensed under MIT license."
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
